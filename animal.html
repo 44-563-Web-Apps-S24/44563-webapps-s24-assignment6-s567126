@@ -3,6 +3,7 @@
  <head>
     <title>Find the Animal Game</title>
  </head>
+
 <body>
 
 <h2>Animal Game by Anil Kumar Meda</h2>
@@ -17,7 +18,7 @@
         <br>
         <button type="button" onclick="checkAnimal()">Check the guess</button>
     </form>
-    <div id="result"></div>
+    <p id="result">This text will be replaced </p>
 </main>
 
 <script>
@@ -37,36 +38,34 @@
         }
 
         document.getElementById('result').innerHTML = `Correct: ${correct}, Wrong: ${wrong}`;
+        
     }
 </script>
-<div>
-    <div id="imageContainer" onclick="selectImage()">
-        <img id="drinkImage" src="Arctic Breeze.webp" alt="Drink Image" width="150" height="150">
-    </div>  
-    
-    <script>
+<div id="imageContainer" onclick="selectImage()">
+    <img id="drinkImage" src="rum.webp" alt="Drink Image" width="150" height="150">
+</div>
+
+<script>
     let useImage = 1;
-    
-        function selectImage()
-         {
-        
-            switch (useImage)
-             {
-                case 1:
-                    document.getElementById("myImage").src = 'Arctic Breeze.webp';
-                    useImage = 2;
-                    break;
-                case 2:
-                    document.getElementById('myImage').src= 'Glacier Gulp.jpeg';
-                    useImage = 3;
-                    break;
-                case 3:
-                    document.getElementById('myImage').src= 'frostbite-fizz.png';
-                    useImage = 1;
-                    break;
-            }
+
+    function selectImage() {
+        switch (useImage) {
+            case 1:
+                document.getElementById('drinkImage').src = 'Appy-Fizz.webp';
+                useImage = 2;
+                break;
+            case 2:
+                document.getElementById('drinkImage').src = 'jack-daniels-whiskey.webp';
+                useImage = 3;
+                break;
+            case 3:
+                document.getElementById('drinkImage').src = 'rum.webp';
+                useImage = 1;
+                break;
         }
-        
-    </script>
+    }
+</script>
+
+
 </body>
-</html>
+</html> 
